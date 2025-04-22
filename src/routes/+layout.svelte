@@ -1,21 +1,68 @@
+
 <script>
 	let { children } = $props();
-	import '../app.css';
+
 </script>
-<div class="flex flex-col min-h-screen mx-5">
-	<header class="bg-blue-500 text-white px-6 py-4 flex justify-between items-center flex-wrap">
-		<h1 class="text-2xl font-bold">IE Javiera Londoño</h1>
-		<nav class="mt-2 sm:mt-0">
-			<a href="/" class="ml-4 hover:underline">Inicio</a>
-			<a href="/decimo" class="ml-4 hover:underline">Decimo 3</a>
-			<span class="ml-4 hover:underline disabled:opacity-50">Once 3</span>
+
+
+<div>
+	<header>
+		<h1>IE Javiera Londoño</h1>
+		<nav>
+			<a href="/" >Inicio</a>
+			<a href="/decimo">Decimo 3</a>
+			<span >Once 3</span>
 		</nav>
 	</header>
-	<main class="flex-grow  mx-auto my-8">
+	<main >
 		{@render children()}
 	</main>
-	<footer class="bg-gray-100 text-gray-700 text-center py-4 text-sm mt-auto">
+	<footer >
 		<p>&copy; {new Date().getFullYear()} - Profesor/a Jovany Vélez</p>
-		<p class="mt-1">Todos los derechos reservados</p>
+		<p>Todos los derechos reservados</p>
 	</footer>
 </div>
+
+
+
+<style>
+	@reference "tailwindcss";
+
+	div {
+		@apply flex flex-col min-h-screen mx-5 rounded-md;
+
+		header {
+			@apply bg-blue-500 text-white px-6 py-4 
+				flex flex-col justify-between items-center flex-wrap
+				rounded-xl ;
+			
+			h1 {
+				@apply text-3xl text-center sm:text-left md:text-5xl font-bold;
+			}
+			nav {
+				@apply  mt-2 sm:mt-0 text-xl sm:text-2xl;
+		
+				a{
+					@apply ml-4 text-amber-50 hover:text-blue-500 rounded-sm hover:bg-amber-50;
+					text-decoration: none;
+				}
+		
+				span {
+					@apply hover:bg-amber-50 ml-4 hover:text-blue-500 rounded-sm disabled:opacity-50;
+				}
+			}
+		}
+		footer {
+			@apply bg-gray-100 text-gray-700 text-center py-4 text-sm mt-auto;
+			p {
+				@apply mt-1;
+			}
+		}
+	}
+
+
+	main {
+		@apply flex-grow mx-2 sm:mx-10 md:mx-14 lg:mx-20  my-8;
+	}
+	
+</style>
