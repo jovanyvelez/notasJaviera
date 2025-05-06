@@ -1,9 +1,5 @@
-
 <main>
-    <a href="/decimo/numeracion">Sistemas de numeracion</a>
-    <a href="/decimo/proposicional">Algebra proposicional</a>
-    <a href="/decimo/expresiones">Expresiones</a>
-    <a href="/decimo/algoritmos">Herramientas Algoritmicas</a>
+    <a href="/decimo/algoritmos/clase1">Clase 1: Introducción a la Programación y Conceptos Básicos</a>
 </main>
 
 <style>
