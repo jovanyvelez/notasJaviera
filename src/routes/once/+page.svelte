@@ -1,6 +1,7 @@
+
 <main>
-    <a href="/decimo/algoritmos/clase1">Clase 1: Introducción a la Programación y Conceptos Básicos</a>
-    <a href="/decimo/algoritmos/clase2">Clase 2: Pasos para la Solución de un Problema</a>
+    <a href="/once/paradigmas">Programacion Funcional vs Programacion Orientada a Objetos</a>
+
 </main>
 
 <style>

@@ -1,6 +1,6 @@
 <script>
   import { createHighlighter } from 'shiki';
-  
+
   let code = $state('');
 
   const code1csharp = `
@@ -17,47 +17,49 @@
             }
         }
     }
+
 `
 const code2csharp = `
-using System;
+  using System;
 
-namespace SaludoPersonalizado
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+  namespace SaludoPersonalizado
+  {
+      class Program
+      {
+          static void Main(string[] args)
+          {
             Console.Write("¿Cómo te llamas? ");
             string nombre = Console.ReadLine();
             Console.WriteLine($"¡Hola {nombre}! Bienvenido/a al mundo de la programación.");
             Console.ReadLine();
-        }
-    }
-}
+          }
+      }
+  }
 
 `
 
 const code3csharp = `
-using System;
+  using System;
 
-namespace CalculadoraSimple
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+  namespace CalculadoraSimple
+  {
+      class Program
+      {
+          static void Main(string[] args)
+          {
             Console.Write("Ingresa el primer número: ");
             int num1 = Convert.ToInt32(Console.ReadLine());
-            
+
             Console.Write("Ingresa el segundo número: ");
             int num2 = Convert.ToInt32(Console.ReadLine());
-            
+
             int suma = num1 + num2;
             Console.WriteLine($"La suma de {num1} y {num2} es: {suma}");
             Console.ReadLine();
-        }
-    }
-}
+          }
+      }
+  }
+
 `
 
   const mycodigo = async (code) => {
@@ -83,7 +85,7 @@ namespace CalculadoraSimple
             <p>waiting for the promise to resolve...</p>
         {:then value}
             <!-- promise was fulfilled or not a Promise -->
-            {@html value}
+            <small>{@html value}</small>
         {:catch error}
             <!-- promise was rejected -->
             <p>Something went wrong: {error.message}</p>

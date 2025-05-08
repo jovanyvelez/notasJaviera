@@ -11,7 +11,7 @@
 		<nav>
 			<a href="/" >Inicio</a>
 			<a href="/decimo">Decimo 3</a>
-			<span >Once 3</span>
+			<a href="/once" >Once 3</a>
 		</nav>
 	</header>
 	<main >
@@ -32,21 +32,21 @@
 		@apply flex flex-col min-h-screen mx-5 rounded-md;
 
 		header {
-			@apply bg-blue-500 text-white px-6 py-4 
+			@apply bg-blue-500 text-white px-6 py-4
 				flex flex-col justify-between items-center flex-wrap
 				rounded-xl ;
-			
+
 			h1 {
 				@apply text-3xl text-center sm:text-left md:text-5xl font-bold;
 			}
 			nav {
 				@apply  mt-2 sm:mt-0 text-xl sm:text-2xl;
-		
+
 				a{
 					@apply ml-4 text-amber-50 hover:text-blue-500 rounded-sm hover:bg-amber-50;
 					text-decoration: none;
 				}
-		
+
 				span {
 					@apply hover:bg-amber-50 ml-4 hover:text-blue-500 rounded-sm disabled:opacity-50;
 				}
@@ -64,5 +64,5 @@
 	main {
 		@apply flex-grow mx-2 sm:mx-10 md:mx-14 lg:mx-20  my-8;
 	}
-	
+
 </style>
