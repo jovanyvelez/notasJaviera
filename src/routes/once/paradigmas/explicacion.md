@@ -451,6 +451,118 @@ A medida que desarrolles más aplicaciones, podrás combinar aspectos de ambos e
 4. Extiende la calculadora POO para que soporte operaciones con números complejos.
 
 
+# 10 Ejercicios de Programación Funcional en C#
+
+## Ejercicio 1: Conversor de Monedas
+Crear una aplicación que permita convertir entre diferentes monedas.
+
+**Funciones a desarrollar:**
+- `MostrarMenuMonedas()`: Muestra las opciones de monedas disponibles
+- `ConvertirDeDolarA(double cantidad, string monedaDestino)`: Convierte de dólares a otra moneda
+- `ConvertirADolar(double cantidad, string monedaOrigen)`: Convierte de cualquier moneda a dólares
+- `ObtenerTasaCambio(string moneda)`: Retorna la tasa de cambio de la moneda especificada
+- `MostrarResultadoConversion(double cantidadOriginal, string monedaOrigen, double cantidadConvertida, string monedaDestino)`
+
+## Ejercicio 2: Calculadora de Estadísticas
+Desarrollar una aplicación que calcule estadísticas básicas de un conjunto de números.
+
+**Funciones a desarrollar:**
+- `CalcularPromedio(double[] numeros)`: Calcula el promedio de un arreglo de números
+- `CalcularMediana(double[] numeros)`: Calcula la mediana de un arreglo de números
+- `EncontrarMinimo(double[] numeros)`: Encuentra el valor mínimo del arreglo
+- `EncontrarMaximo(double[] numeros)`: Encuentra el valor máximo del arreglo
+- `CalcularDesviacionEstandar(double[] numeros)`: Calcula la desviación estándar
+- `MostrarEstadisticas(double[] numeros)`: Muestra todas las estadísticas calculadas
+
+## Ejercicio 3: Gestor de Tareas
+Crear una aplicación para gestionar tareas pendientes.
+
+**Funciones a desarrollar:**
+- `MostrarMenuTareas()`: Muestra el menú de opciones para gestionar tareas
+- `AgregarTarea(List<string> tareas)`: Agrega una nueva tarea a la lista
+- `EliminarTarea(List<string> tareas, int indice)`: Elimina una tarea por su índice
+- `MarcarComoCompletada(List<string> tareas, List<string> tareasCompletadas, int indice)`: Mueve una tarea a la lista de completadas
+- `MostrarTareas(List<string> tareas, string titulo)`: Muestra la lista de tareas con un título
+
+## Ejercicio 4: Calculadora de Geometría
+Desarrollar una aplicación que calcule áreas y perímetros de diferentes figuras geométricas.
+
+**Funciones a desarrollar:**
+- `MostrarMenuFiguras()`: Muestra el menú de figuras disponibles
+- `CalcularAreaCirculo(double radio)`: Calcula el área de un círculo
+- `CalcularPerimetroCirculo(double radio)`: Calcula el perímetro de un círculo
+- `CalcularAreaRectangulo(double base, double altura)`: Calcula el área de un rectángulo
+- `CalcularPerimetroRectangulo(double base, double altura)`: Calcula el perímetro de un rectángulo
+- `CalcularAreaTriangulo(double base, double altura)`: Calcula el área de un triángulo
+- `CalcularPerimetroTriangulo(double lado1, double lado2, double lado3)`: Calcula el perímetro de un triángulo
+- `MostrarResultadoGeometria(string figura, string calculo, double resultado)`
+
+## Ejercicio 5: Conversor de Unidades
+Crear una aplicación que convierta entre diferentes unidades de medida.
+
+**Funciones a desarrollar:**
+- `MostrarMenuUnidades()`: Muestra el menú de categorías de unidades
+- `MostrarMenuLongitud()`: Muestra el menú de unidades de longitud
+- `MostrarMenuPeso()`: Muestra el menú de unidades de peso
+- `MostrarMenuVolumen()`: Muestra el menú de unidades de volumen
+- `ConvertirLongitud(double valor, string unidadOrigen, string unidadDestino)`: Convierte entre unidades de longitud
+- `ConvertirPeso(double valor, string unidadOrigen, string unidadDestino)`: Convierte entre unidades de peso
+- `ConvertirVolumen(double valor, string unidadOrigen, string unidadDestino)`: Convierte entre unidades de volumen
+- `MostrarResultadoConversion(double valorOriginal, string unidadOrigen, double valorConvertido, string unidadDestino)`
+
+## Ejercicio 6: Analizador de Texto
+Desarrollar una aplicación que analice un texto ingresado por el usuario.
+
+**Funciones a desarrollar:**
+- `ContarPalabras(string texto)`: Cuenta el número de palabras en el texto
+- `ContarCaracteres(string texto, bool incluirEspacios)`: Cuenta el número de caracteres
+- `ContarVocales(string texto)`: Cuenta el número de vocales en el texto
+- `ContarConsonantes(string texto)`: Cuenta el número de consonantes en el texto
+- `EncontrarPalabraMasLarga(string texto)`: Encuentra la palabra más larga del texto
+- `MostrarEstadisticasTexto(string texto)`: Muestra todas las estadísticas calculadas del texto
+
+## Ejercicio 7: Generador de Contraseñas
+Crear una aplicación que genere contraseñas aleatorias según criterios del usuario.
+
+**Funciones a desarrollar:**
+- `MostrarMenuOpciones()`: Muestra opciones para la generación de contraseñas
+- `GenerarContraseña(int longitud, bool incluirMayusculas, bool incluirNumeros, bool incluirEspeciales)`: Genera una contraseña según los parámetros
+- `EvaluarSeguridadContraseña(string contraseña)`: Evalúa la seguridad de una contraseña
+- `MostrarContraseñaGenerada(string contraseña, string nivelSeguridad)`
+
+## Ejercicio 8: Calculadora de Fechas
+Desarrollar una aplicación que realice operaciones con fechas.
+
+**Funciones a desarrollar:**
+- `MostrarMenuFechas()`: Muestra el menú de operaciones con fechas
+- `CalcularDiferenciaEntreFechas(DateTime fecha1, DateTime fecha2)`: Calcula días entre dos fechas
+- `SumarDiasAFecha(DateTime fecha, int dias)`: Suma un número de días a una fecha
+- `RestarDiasAFecha(DateTime fecha, int dias)`: Resta un número de días a una fecha
+- `ObtenerDiaSemana(DateTime fecha)`: Obtiene el día de la semana de una fecha
+- `VerificarAñoBisiesto(int año)`: Verifica si un año es bisiesto
+- `MostrarResultadoOperacionFecha(string operacion, string resultado)`
+
+## Ejercicio 9: Juego de Adivinanza de Números
+Crear un juego donde el usuario debe adivinar un número generado aleatoriamente.
+
+**Funciones a desarrollar:**
+- `GenerarNumeroAleatorio(int min, int max)`: Genera un número aleatorio en un rango
+- `EvaluarIntento(int numeroSecreto, int intento)`: Evalúa si el intento es correcto, mayor o menor
+- `CalcularPuntaje(int intentosRealizados, int intentosMaximos)`: Calcula el puntaje según los intentos
+- `MostrarPista(int numeroSecreto, int intento)`: Muestra una pista según la distancia al número secreto
+- `MostrarResultadoJuego(bool adivinado, int numeroSecreto, int intentos, int puntaje)`
+
+## Ejercicio 10: Simulador de Préstamos
+Desarrollar una aplicación que calcule cuotas y total a pagar de un préstamo.
+
+**Funciones a desarrollar:**
+- `CalcularCuotaMensual(double montoPrestamo, double tasaInteresAnual, int plazoMeses)`: Calcula la cuota mensual
+- `CalcularTotalAPagar(double cuotaMensual, int plazoMeses)`: Calcula el monto total a pagar
+- `CalcularTotalIntereses(double totalAPagar, double montoPrestamo)`: Calcula el total de intereses
+- `GenerarTablaPagos(double montoPrestamo, double tasaInteresAnual, int plazoMeses)`: Genera una tabla de amortización
+- `MostrarResumenPrestamo(double montoPrestamo, double tasaInteresAnual, int plazoMeses, double cuotaMensual, double totalAPagar, double totalIntereses)`
+
+
 <style>
 	@reference "tailwindcss";
 
