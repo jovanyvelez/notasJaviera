@@ -1,8 +1,4 @@
-<script>
-  import codigo from'$lib/components/funciones.svelte';
-</script>
 
-<codigo />
 
 # Calculadora en C#: Enfoque Funcional vs Programación Orientada a Objetos
 
