@@ -1,170 +1,9 @@
+<script>
+  import { createHighlighter } from 'shiki';
 
+  let code = $state('');
 
-# Calculadora en C#: Enfoque Funcional vs Programación Orientada a Objetos
-
-En este artículo, exploraremos dos enfoques diferentes para desarrollar una aplicación de calculadora en consola utilizando C#. Veremos cómo implementar la misma funcionalidad mediante programación con funciones y mediante programación orientada a objetos (POO). Este contenido está dirigido a estudiantes de programación entre 15 y 17 años que estén comenzando a entender los diferentes paradigmas de programación.
-
-## Introducción
-
-Una calculadora es un excelente proyecto para principiantes, ya que incluye varias operaciones básicas y proporciona una interfaz de usuario sencilla. En nuestro caso, desarrollaremos una calculadora de consola que puede:
-
-- Sumar dos números
-- Restar dos números
-- Multiplicar dos números
-- Dividir dos números
-- Mostrar un menú interactivo
-- Manejar errores básicos
-
-Veamos cada enfoque de programación por separado.
-
-## Enfoque 1: Calculadora usando Programación Funcional
-
-En la programación funcional, organizamos nuestro código en funciones que realizan tareas específicas. Veamos cómo implementar nuestra calculadora usando este enfoque:
-
-```csharp
-using System;
-
-namespace CalculadoraFuncional
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            bool continuar = true;
-
-            Console.WriteLine("¡Bienvenido a la Calculadora Funcional!");
-
-            while (continuar)
-            {
-                // Mostrar menú
-                MostrarMenu();
-
-                // Obtener la operación elegida
-                string opcion = Console.ReadLine();
-
-                if (opcion == "5")
-                {
-                    Console.WriteLine("¡Gracias por usar la calculadora!");
-                    continuar = false;
-                    continue;
-                }
-
-                // Solicitar los números
-                Console.Write("Ingresa el primer número: ");
-                double num1 = Convert.ToDouble(Console.ReadLine());
-
-                Console.Write("Ingresa el segundo número: ");
-                double num2 = Convert.ToDouble(Console.ReadLine());
-
-                // Realizar la operación según la opción elegida
-                double resultado = 0;
-
-                switch (opcion)
-                {
-                    case "1":
-                        resultado = Sumar(num1, num2);
-                        MostrarResultado("Suma", num1, num2, resultado);
-                        break;
-                    case "2":
-                        resultado = Restar(num1, num2);
-                        MostrarResultado("Resta", num1, num2, resultado);
-                        break;
-                    case "3":
-                        resultado = Multiplicar(num1, num2);
-                        MostrarResultado("Multiplicación", num1, num2, resultado);
-                        break;
-                    case "4":
-                        if (num2 == 0)
-                        {
-                            Console.WriteLine("Error: No se puede dividir por cero.");
-                        }
-                        else
-                        {
-                            resultado = Dividir(num1, num2);
-                            MostrarResultado("División", num1, num2, resultado);
-                        }
-                        break;
-                    default:
-                        Console.WriteLine("Opción no válida. Intenta de nuevo.");
-                        break;
-                }
-
-                Console.WriteLine("\nPresiona cualquier tecla para continuar...");
-                Console.ReadKey();
-                Console.Clear();
-            }
-        }
-
-        // Funciones para operaciones matemáticas
-        static double Sumar(double a, double b)
-        {
-            return a + b;
-        }
-
-        static double Restar(double a, double b)
-        {
-            return a - b;
-        }
-
-        static double Multiplicar(double a, double b)
-        {
-            return a * b;
-        }
-
-        static double Dividir(double a, double b)
-        {
-            return a / b;
-        }
-
-        // Función para mostrar menú
-        static void MostrarMenu()
-        {
-            Console.WriteLine("\n==== MENÚ DE CALCULADORA ====");
-            Console.WriteLine("1. Sumar");
-            Console.WriteLine("2. Restar");
-            Console.WriteLine("3. Multiplicar");
-            Console.WriteLine("4. Dividir");
-            Console.WriteLine("5. Salir");
-            Console.Write("Selecciona una opción (1-5): ");
-        }
-
-        // Función para mostrar resultado
-        static void MostrarResultado(string operacion, double num1, double num2, double resultado)
-        {
-            Console.WriteLine($"\nResultado de la {operacion}: {num1} {ObtenerSimboloOperacion(operacion)} {num2} = {resultado}");
-        }
-
-        // Función para obtener el símbolo de la operación
-        static string ObtenerSimboloOperacion(string operacion)
-        {
-            switch (operacion)
-            {
-                case "Suma": return "+";
-                case "Resta": return "-";
-                case "Multiplicación": return "*";
-                case "División": return "/";
-                default: return "";
-            }
-        }
-    }
-}
-```
-
-### Explicación del enfoque funcional
-
-En este enfoque, todas las operaciones están implementadas como funciones estáticas dentro de la clase `Program`:
-
-1. **Función principal (`Main`)**: Controla el flujo del programa y la interacción con el usuario.
-2. **Funciones de operaciones matemáticas**: `Sumar()`, `Restar()`, `Multiplicar()` y `Dividir()` que realizan los cálculos básicos.
-3. **Funciones de UI**: `MostrarMenu()` y `MostrarResultado()` que gestionan la interfaz de usuario.
-
-Este enfoque es directo y fácil de entender para principiantes. Cada función realiza una tarea específica y el flujo del programa sigue una estructura lineal. Las operaciones matemáticas están claramente definidas como funciones independientes que aceptan dos parámetros y devuelven un resultado.
-
-## Enfoque 2: Calculadora usando Programación Orientada a Objetos (POO)
-
-En la programación orientada a objetos, organizamos nuestro código en clases que representan entidades con propiedades y comportamientos. Veamos cómo implementar la misma calculadora usando este enfoque:
-
-```csharp
+  const code1csharp = `
 using System;
 
 namespace CalculadoraPOO
@@ -306,7 +145,7 @@ namespace CalculadoraPOO
                     Console.WriteLine($"Error inesperado: {ex.Message}");
                 }
 
-                Console.WriteLine("\nPresiona cualquier tecla para continuar...");
+                Console.WriteLine("Presiona cualquier tecla para continuar...");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -315,7 +154,7 @@ namespace CalculadoraPOO
         // Método para mostrar el menú
         private void MostrarMenu()
         {
-            Console.WriteLine("\n==== MENÚ DE CALCULADORA ====");
+            Console.WriteLine("==== MENÚ DE CALCULADORA ====");
             Console.WriteLine("1. Sumar");
             Console.WriteLine("2. Restar");
             Console.WriteLine("3. Multiplicar");
@@ -342,11 +181,217 @@ namespace CalculadoraPOO
         private void MostrarResultado(string operacion, double num1, double num2, double resultado)
         {
             string simbolo = _calculadora.ObtenerSimboloOperacion(operacion);
-            Console.WriteLine($"\nResultado de la {operacion}: {num1} {simbolo} {num2} = {resultado}");
+            Console.WriteLine($"Resultado de la {operacion}: {num1} {simbolo} {num2} = {resultado}");
         }
     }
 }
-```
+  `
+
+    const code2csharp = `
+
+    using System;
+
+    namespace CalculadoraFuncional
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                bool continuar = true;
+
+                Console.WriteLine("¡Bienvenido a la Calculadora Funcional!");
+
+                while (continuar)
+                {
+                    // Mostrar menú
+                    MostrarMenu();
+
+                    // Obtener la operación elegida
+                    string opcion = Console.ReadLine();
+
+                    if (opcion == "5")
+                    {
+                        Console.WriteLine("¡Gracias por usar la calculadora!");
+                        continuar = false;
+                        continue;
+                    }
+
+                    // Solicitar los números
+                    Console.Write("Ingresa el primer número: ");
+                    double num1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("Ingresa el segundo número: ");
+                    double num2 = Convert.ToDouble(Console.ReadLine());
+
+                    // Realizar la operación según la opción elegida
+                    double resultado = 0;
+
+                    switch (opcion)
+                    {
+                        case "1":
+                            resultado = Sumar(num1, num2);
+                            MostrarResultado("Suma", num1, num2, resultado);
+                            break;
+                        case "2":
+                            resultado = Restar(num1, num2);
+                            MostrarResultado("Resta", num1, num2, resultado);
+                            break;
+                        case "3":
+                            resultado = Multiplicar(num1, num2);
+                            MostrarResultado("Multiplicación", num1, num2, resultado);
+                            break;
+                        case "4":
+                            if (num2 == 0)
+                            {
+                                Console.WriteLine("Error: No se puede dividir por cero.");
+                            }
+                            else
+                            {
+                                resultado = Dividir(num1, num2);
+                                MostrarResultado("División", num1, num2, resultado);
+                            }
+                            break;
+                        default:
+                            Console.WriteLine("Opción no válida. Intenta de nuevo.");
+                            break;
+                    }
+
+                    Console.WriteLine("Presiona cualquier tecla para continuar...");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+
+            // Funciones para operaciones matemáticas
+            static double Sumar(double a, double b)
+            {
+                return a + b;
+            }
+
+            static double Restar(double a, double b)
+            {
+                return a - b;
+            }
+
+            static double Multiplicar(double a, double b)
+            {
+                return a * b;
+            }
+
+            static double Dividir(double a, double b)
+            {
+                return a / b;
+            }
+
+            // Función para mostrar menú
+            static void MostrarMenu()
+            {
+                Console.WriteLine("==== MENÚ DE CALCULADORA ====");
+                Console.WriteLine("1. Sumar");
+                Console.WriteLine("2. Restar");
+                Console.WriteLine("3. Multiplicar");
+                Console.WriteLine("4. Dividir");
+                Console.WriteLine("5. Salir");
+                Console.Write("Selecciona una opción (1-5): ");
+            }
+
+            // Función para mostrar resultado
+            static void MostrarResultado(string operacion, double num1, double num2, double resultado)
+            {
+                Console.WriteLine($"Resultado de la {operacion}: {num1} {ObtenerSimboloOperacion(operacion)} {num2} = {resultado}");
+            }
+
+            // Función para obtener el símbolo de la operación
+            static string ObtenerSimboloOperacion(string operacion)
+            {
+                switch (operacion)
+                {
+                    case "Suma": return "+";
+                    case "Resta": return "-";
+                    case "Multiplicación": return "*";
+                    case "División": return "/";
+                    default: return "";
+                }
+            }
+        }
+    }
+`
+
+
+  const mycodigo = async (code) => {
+
+    const highlighter = await createHighlighter({
+      themes: ['catppuccin-mocha'],
+      langs: ['csharp'],
+    })
+
+
+    const html = highlighter.codeToHtml(code, { lang: 'csharp', theme: 'catppuccin-mocha' });
+
+    return html
+
+
+  }
+
+</script>
+
+{#snippet codigo(code)}
+    <div>
+        {#await mycodigo(code)}
+            <!-- promise is pending -->
+            <p>waiting for the promise to resolve...</p>
+        {:then value}
+            <!-- promise was fulfilled or not a Promise -->
+            <small>{@html value}</small>
+        {:catch error}
+            <!-- promise was rejected -->
+            <p>Something went wrong: {error.message}</p>
+        {/await}
+    </div>
+{/snippet}
+
+
+# Calculadora en C#: Enfoque Funcional vs Programación Orientada a Objetos
+
+En este artículo, exploraremos dos enfoques diferentes para desarrollar una aplicación de calculadora en consola utilizando C#. Veremos cómo implementar la misma funcionalidad mediante programación con funciones y mediante programación orientada a objetos (POO). Este contenido está dirigido a estudiantes de programación entre 15 y 17 años que estén comenzando a entender los diferentes paradigmas de programación.
+
+## Introducción
+
+Una calculadora es un excelente proyecto para principiantes, ya que incluye varias operaciones básicas y proporciona una interfaz de usuario sencilla. En nuestro caso, desarrollaremos una calculadora de consola que puede:
+
+- Sumar dos números
+- Restar dos números
+- Multiplicar dos números
+- Dividir dos números
+- Mostrar un menú interactivo
+- Manejar errores básicos
+
+Veamos cada enfoque de programación por separado.
+
+## Enfoque 1: Calculadora usando Programación Funcional
+
+En la programación funcional, organizamos nuestro código en funciones que realizan tareas específicas. Veamos cómo implementar nuestra calculadora usando este enfoque:
+
+{@render codigo(code2csharp)}
+
+
+
+### Explicación del enfoque funcional
+
+En este enfoque, todas las operaciones están implementadas como funciones estáticas dentro de la clase `Program`:
+
+1. **Función principal (`Main`)**: Controla el flujo del programa y la interacción con el usuario.
+2. **Funciones de operaciones matemáticas**: `Sumar()`, `Restar()`, `Multiplicar()` y `Dividir()` que realizan los cálculos básicos.
+3. **Funciones de UI**: `MostrarMenu()` y `MostrarResultado()` que gestionan la interfaz de usuario.
+
+Este enfoque es directo y fácil de entender para principiantes. Cada función realiza una tarea específica y el flujo del programa sigue una estructura lineal. Las operaciones matemáticas están claramente definidas como funciones independientes que aceptan dos parámetros y devuelven un resultado.
+
+## Enfoque 2: Calculadora usando Programación Orientada a Objetos (POO)
+
+En la programación orientada a objetos, organizamos nuestro código en clases que representan entidades con propiedades y comportamientos. Veamos cómo implementar la misma calculadora usando este enfoque:
+
+{@render codigo(code1csharp)}
+
 
 ### Explicación del enfoque orientado a objetos
 
@@ -404,3 +449,13 @@ A medida que desarrolles más aplicaciones, podrás combinar aspectos de ambos e
 2. Implementa un historial de operaciones en la versión POO.
 3. Modifica la calculadora funcional para que maneje excepciones.
 4. Extiende la calculadora POO para que soporte operaciones con números complejos.
+
+
+<style>
+	@reference "tailwindcss";
+
+	div {
+		@apply flex text-xs sm:text-xl;
+
+	}
+</style>

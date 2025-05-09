@@ -105,3 +105,13 @@ Esta es la más directa. Simplemente invierte el valor de verdad de una idea. Si
 **Recuerda:** Esta es una herramienta para **ti**. Léela con calma, anota tus dudas y ¡prepárate para participar en clase! La lógica puede ser divertida, ¡es como resolver acertijos!
 
 ¡Nos vemos en el salón, equipo! 💪
+
+
+<style>
+	@reference "tailwindcss";
+
+	div {
+		@apply flex text-xs sm:text-xl w-10/12;
+
+	}
+</style>
