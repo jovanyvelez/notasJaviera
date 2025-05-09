@@ -126,7 +126,7 @@ const code3csharp = `
 </script>
 
 {#snippet codigo(code)}
-    <div style="font-size: 1 rem">
+    <div>
         {#await mycodigo(code)}
             <!-- promise is pending -->
             <p>waiting for the promise to resolve...</p>
@@ -299,3 +299,13 @@ En esta clase hemos aprendido:
 ---
 
 ¡En la próxima clase aprenderemos sobre tipos de datos e información en C#!
+
+
+<style>
+	@reference "tailwindcss";
+
+	div {
+		@apply flex justify-around text-xs sm:text-xl w-10/12;
+
+	}
+</style>

@@ -2,7 +2,7 @@
 	import Uno from './clase1.md';
 </script>
 
-<div >
+<div>
 	<Uno />
 </div>
 

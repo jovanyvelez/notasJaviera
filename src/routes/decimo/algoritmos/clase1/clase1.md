@@ -13,7 +13,9 @@
             static void Main(string[] args)
             {
                 Console.WriteLine("¡Hola Mundo!");
-                Console.ReadLine(); // Espera a que el usuario presione Enter
+                
+                // Espera a que el usuario presione Enter
+                Console.ReadLine(); 
             }
         }
     }
@@ -79,7 +81,7 @@ const code3csharp = `
 </script>
 
 {#snippet codigo(code)}
-    <div style="font-size: 1 rem">
+    <div>
         {#await mycodigo(code)}
             <!-- promise is pending -->
             <p>waiting for the promise to resolve...</p>
@@ -159,7 +161,9 @@ Para programar en C#, utilizaremos Visual Studio:
 Vamos a crear el clásico "¡Hola Mundo!" en C#:
 
 
+
 {@render codigo(code1csharp)}
+
 ### Explicación del Código
 
 - `using System;`: Importa la biblioteca System que contiene funcionalidades básicas.
@@ -174,8 +178,9 @@ Vamos a crear el clásico "¡Hola Mundo!" en C#:
 ### Ejercicio 1: Personaliza tu Hola Mundo
 Modifica el programa para que solicite tu nombre y luego muestre un saludo personalizado.
 
-
+<div  style="display: flex; align-items: center; width:10%">
 {@render codigo(code2csharp)}
+</div>
 ### Ejercicio 2: Calculadora Simple
 Crea un programa que pida dos números al usuario y muestre su suma.
 
@@ -206,3 +211,13 @@ En esta primera clase hemos aprendido:
 ---
 
 ¡Nos vemos en la próxima clase donde aprenderemos sobre los pasos para la solución de problemas!
+
+
+<style>
+	@reference "tailwindcss";
+
+	div {
+		@apply flex text-xs sm:text-xl w-10/12;
+
+	}
+</style>
