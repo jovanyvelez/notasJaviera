@@ -301,11 +301,11 @@ En esta clase hemos aprendido:
 ¡En la próxima clase aprenderemos sobre tipos de datos e información en C#!
 
 
-<style>
+<!--style>
 	@reference "tailwindcss";
 
 	div {
 		@apply flex justify-around text-xs sm:text-xl w-10/12;
 
 	}
-</style>
+</style-->

@@ -213,11 +213,11 @@ En esta primera clase hemos aprendido:
 ¡Nos vemos en la próxima clase donde aprenderemos sobre los pasos para la solución de problemas!
 
 
-<style>
+<!--style>
 	@reference "tailwindcss";
 
 	div {
 		@apply flex text-xs sm:text-xl w-10/12;
 
 	}
-</style>
+</style-->
