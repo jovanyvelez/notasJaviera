@@ -1,6 +1,7 @@
 <main>
     <a href="/decimo/algoritmos/clase1">Clase 1: Introducción a la Programación y Conceptos Básicos</a>
     <a href="/decimo/algoritmos/clase2">Clase 2: Pasos para la Solución de un Problema</a>
+    <a href="/decimo/algoritmos/clase3">Clase 3: Definición de Campos y sus Tipos</a>
 </main>
 
 <style>
@@ -10,8 +11,10 @@
         @apply flex flex-col items-center justify-center my-10 sm:my-30 md:my-40 lg:my-48;
 
         a {
-            @apply text-2xl hover:font-bold sm:text-5xl my-2;
+            @apply text-xl hover:font-bold sm:text-2xl my-2;
             text-decoration: none;
         }
     }
 </style>
+
+<!--Clase 3: Definición de Campos y sus Tipos-->

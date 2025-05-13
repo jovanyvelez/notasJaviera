@@ -47,9 +47,6 @@
 					text-decoration: none;
 				}
 
-				span {
-					@apply hover:bg-amber-50 ml-4 hover:text-blue-500 rounded-sm disabled:opacity-50;
-				}
 			}
 		}
 		footer {
