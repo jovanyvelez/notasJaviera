@@ -8,7 +8,7 @@
     @reference "tailwindcss";
 
     main {
-        @apply flex flex-col items-center justify-center my-10 sm:my-30 md:my-40 lg:my-48;
+        @apply flex flex-col  my-10 sm:my-30 md:my-40 lg:my-48;
 
         a {
             @apply text-xl hover:font-bold sm:text-2xl my-2;
