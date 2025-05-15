@@ -2,6 +2,8 @@
     <a href="/decimo/algoritmos/clase1">Clase 1: Introducción a la Programación y Conceptos Básicos</a>
     <a href="/decimo/algoritmos/clase2">Clase 2: Pasos para la Solución de un Problema</a>
     <a href="/decimo/algoritmos/clase3">Clase 3: Definición de Campos y sus Tipos</a>
+    <a href="/decimo/algoritmos/taller1">Ejercicios Propuestos String</a>
+    <a href="/decimo/algoritmos/taller2">Ejercicios Propuestos If Statements</a>
 </main>
 
 <style>
