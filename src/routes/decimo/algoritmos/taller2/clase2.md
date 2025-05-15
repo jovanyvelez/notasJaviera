@@ -2,6 +2,16 @@
 
   Para cada ejercicio, crea un nuevo proyecto de consola en C#. Lee atentamente el problema y utiliza las sentencias if, else if y else para tomar decisiones basadas en la entrada del usuario o en valores predefinidos. Recuerda cómo leer datos de la consola (Console.ReadLine()) y cómo convertirlos al tipo de dato necesario (ej: int.Parse()).
 
+  Fuentes de Consulta:
+  https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/selection-statements
+
+  https://www.youtube.com/watch?v=c0dD3uKN5KA&t=2376s
+
+  https://www.youtube.com/watch?v=c0dD3uKN5KA&t=2742s
+
+  https://www.youtube.com/watch?v=c0dD3uKN5KA&t=2923s
+  
+
 ## Ejercicios Propuestos (C# If Statements):
 
 ### 1. Mayor de Edad:
